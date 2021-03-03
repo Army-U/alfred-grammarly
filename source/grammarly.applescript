@@ -6,6 +6,6 @@ on run argv
     delay 3
     execute front window's active tab javascript "document.querySelector('[data-name=\"new-doc-add-btn\"]').click()"
     delay 3
-    execute front window's active tab javascript "document.querySelector('.ql-editor p').innerText = \"" & (the clipboard) & "\""
+    execute front window's active tab javascript "document.querySelector('.ql-editor').innerHTML = '<p>" & (the clipboard) & "</p>'"
   end tell
 end run
